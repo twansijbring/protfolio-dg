@@ -391,3 +391,72 @@ body {
     align-items: flex-start;
   }
 }
+
+/* === Duo-workshop: inklapbare DIM-sectie netjes in jouw stijl === */
+details.card {
+  min-height: auto; /* voorkomt onnodig hoge card */
+}
+
+details.card summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+details.card summary::-webkit-details-marker {
+  display: none;
+}
+
+details.card summary strong {
+  color: var(--text);
+}
+
+details.card summary .muted {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+details.card[open] summary {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+.details__content {
+  display: grid;
+  gap: 12px;
+}
+
+.details__content h4 {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.details__content p,
+.details__content li {
+  color: var(--muted);
+}
+
+/* === Bronnen: APA7 netjes en leesbaar === */
+.sources {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.sources li {
+  color: var(--muted);
+  line-height: 1.55;
+  padding-left: 18px;
+  text-indent: -18px; /* hanging indent zoals APA */
+}
+
